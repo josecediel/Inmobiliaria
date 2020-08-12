@@ -1,15 +1,11 @@
 package dominio;
 
 public class Registro {
-
+    
     private int id;
-    private String FechaAlta;
     private String tipo;
-    private String operacion;
+    private String operation;
     private String provincia;
-    private int superficie;
-    private int percioVenta;
-    private String fechaVenta;
     private String vendedor;
 
     public Registro() {
@@ -19,26 +15,11 @@ public class Registro {
         this.id = id;
     }
 
-    public Registro(String FechaAlta, String tipo, String operacion, String provincia, int superficie, int percioVenta, String fechaVenta, String vendedor) {
-        this.FechaAlta = FechaAlta;
-        this.tipo = tipo;
-        this.operacion = operacion;
-        this.provincia = provincia;
-        this.superficie = superficie;
-        this.percioVenta = percioVenta;
-        this.fechaVenta = fechaVenta;
-        this.vendedor = vendedor;
-    }
-
-    public Registro(int id, String FechaAlta, String tipo, String operacion, String provincia, int superficie, int percioVenta, String fechaVenta, String vendedor) {
+    public Registro(int id, String tipo, String operation, String provincia, String vendedor) {
         this.id = id;
-        this.FechaAlta = FechaAlta;
         this.tipo = tipo;
-        this.operacion = operacion;
+        this.operation = operation;
         this.provincia = provincia;
-        this.superficie = superficie;
-        this.percioVenta = percioVenta;
-        this.fechaVenta = fechaVenta;
         this.vendedor = vendedor;
     }
 
@@ -50,14 +31,6 @@ public class Registro {
         this.id = id;
     }
 
-    public String getFechaAlta() {
-        return FechaAlta;
-    }
-
-    public void setFechaAlta(String FechaAlta) {
-        this.FechaAlta = FechaAlta;
-    }
-
     public String getTipo() {
         return tipo;
     }
@@ -66,12 +39,12 @@ public class Registro {
         this.tipo = tipo;
     }
 
-    public String getOperacion() {
-        return operacion;
+    public String getOperation() {
+        return operation;
     }
 
-    public void setOperacion(String operacion) {
-        this.operacion = operacion;
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
     public String getProvincia() {
@@ -80,30 +53,6 @@ public class Registro {
 
     public void setProvincia(String provincia) {
         this.provincia = provincia;
-    }
-
-    public int getSuperficie() {
-        return superficie;
-    }
-
-    public void setSuperficie(int superficie) {
-        this.superficie = superficie;
-    }
-
-    public int getPercioVenta() {
-        return percioVenta;
-    }
-
-    public void setPercioVenta(int percioVenta) {
-        this.percioVenta = percioVenta;
-    }
-
-    public String getFechaVenta() {
-        return fechaVenta;
-    }
-
-    public void setFechaVenta(String fechaVenta) {
-        this.fechaVenta = fechaVenta;
     }
 
     public String getVendedor() {
@@ -116,7 +65,9 @@ public class Registro {
 
     @Override
     public String toString() {
-        return "Registro{" + "id=" + id + ", FechaAlta=" + FechaAlta + ", tipo=" + tipo + ", operacion=" + operacion + ", provincia=" + provincia + ", superficie=" + superficie + ", percioVenta=" + percioVenta + ", fechaVenta=" + fechaVenta + ", vendedor=" + vendedor + '}';
+        return "Registro{" + "id=" + id + ", tipo=" + tipo + ", operation=" + operation + ", provincia=" + provincia + ", vendedor=" + vendedor + '}';
     }
-
+    
+    
+    
 }
